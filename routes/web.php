@@ -22,8 +22,13 @@ Route::middleware('auth')->group(function () {
 
     // ai dashboard and generation urls
     Route::get('/dashboard', [AIController::class, 'index'])->name('dashboard');
-    Route::post('/generate-response', [AIController::class, 'generateResponse'])->name('generate.response');
+   
     // ai dashboard and generation urls end here
+   
+    Route::post('/generate-response', [AIController::class, 'generateResponse'])
+    ->name('generate.response')
+    ->middleware('throttle:5,1');
+    // response can only be generated 5 times in a minute using 5,1 throttle
 
 
 
