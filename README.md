@@ -1,3 +1,37 @@
+## To Run the Project Follow these steps
+1) Clone the project or download it (https://github.com/shahryarahmad/openai_app.git)
+2) ``` bash 
+    cd openai_app 
+    ```
+3) ``` bash
+   composer install
+   ```
+4) ``` bash
+    cp .env.example .env
+    ```
+5) Get OPENAI_API_KEY from the platform.openai.com
+6)  ``` bash 
+    php artisan key:generate
+    ```
+7) ``` bash
+    php artisan migrate
+    ```
+8) ```bash 
+    php artisan serve
+    ```
+9) insall npm and run dev
+    ``` bash
+        npm install
+
+        npm run dev
+    ```
+10) Register User and then use the model as it.
+
+
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
