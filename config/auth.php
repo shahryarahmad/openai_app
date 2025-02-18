@@ -65,6 +65,10 @@ return [
             'model' => env('AUTH_MODEL', App\Models\User::class),
         ],
 
+        // Other providers...
+        App\Providers\AuthServiceProvider::class,
+
+
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',

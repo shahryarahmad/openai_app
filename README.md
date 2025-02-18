@@ -14,7 +14,7 @@
     php artisan key:generate
     ```
 7) ``` bash
-    php artisan migrate
+    php artisan migrate --seed
     ```
 8) ```bash 
     php artisan serve

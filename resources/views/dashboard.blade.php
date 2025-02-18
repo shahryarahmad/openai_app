@@ -23,7 +23,7 @@
                             <textarea name="prompt" class="w-full border rounded p-2" style="color:black" placeholder="Enter your prompt..." required></textarea>
                             <button type="submit" class="bg-blue-500 text-white px-4 py-2 mt-2 rounded">Generate Response</button>
                         </form>
-
+                        @can('view-results')
                         <!-- Display Responses -->
                         <h3 class="text-lg font-bold mt-6">Query History</h3>
                         @foreach($queries as $query)
@@ -32,8 +32,11 @@
                             <p><strong>AI:</strong> {{ $query->response }}</p>
                         </div>
                         @endforeach
-
+                        @else
+                        <p>You don't have access to view Query History only admins can see the query History.</p>
+                        @endcan
                     </div>
+
                 </div>
             </div>
         </div>
