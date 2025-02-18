@@ -21,7 +21,7 @@
                         <form method="POST" action="{{ route('generate.response') }}" class="mb-4">
                             @csrf
                             <textarea name="prompt" class="w-full border rounded p-2" style="color:black" placeholder="Enter your prompt..." required></textarea>
-                            <select name="gptOption">
+                            <select name="gptOption" style="color: black">
                                 <option value="gpt-3.5-turbo">gpt-3.5</option>
                                 <option value="gpt-4o-mini">gpt-4</option>
                             </select>
